@@ -42,7 +42,19 @@ person.favoriteColor = 'Blue';
 
 // Teraz jedno z ćwiczeń z kodilli - obliczanie pola trójkąta
 
-var a = 20;
-var h = 30;
+var a = 2;
+var h = 3;
 var triangleArea = a*h/2;
 console.log(triangleArea);
+
+// ćwiczenie 8.5
+
+var value = (a * a) + (2 * a * h) - (h * h);
+if (value < 0) {
+	document.write('Liczba jest mniejsza od zera');
+} else if (value == 0) {
+	document.write('Liczba jest równa zeru');
+} else {
+	document.write('Liczba jest większa od zera');
+}
+

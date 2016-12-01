@@ -13,8 +13,8 @@ var isDogeHappy = true; // pieseł powinien być szczęśliwy - wow
 
 // zmienne liczbowe mają dwa typy: stałe (int) oraz zmiennoprzecinkowe (float)
 
-var age = 27;
-	var money = 25.90;
+var age = 27,
+	money = 25.90;
 // tablice tworzy się poprzez podanie poszczególnych wartości po przecinkach pomiędzy kwadratowymi nawiasami.
 // poszczególne indeksy (bo tak nazywają się kolejne elementy tablicy) mają przypisany odpowiedni numer zaczynając od 0
 
@@ -46,3 +46,5 @@ var a = 20;
 var h = 30;
 var triangleArea = a*h/2;
 console.log(triangleArea);
+
+document.getElementById('identyfikator').innerHTML = 'Pole trójkąta to: ' + triangleArea;

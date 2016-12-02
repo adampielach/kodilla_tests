@@ -44,19 +44,36 @@ person.favoriteColor = 'Blue';
 
 var a = 2;
 var h = 3;
-var triangleArea = a*h/2;
-console.log(triangleArea);
+// var triangleArea = a*h/2;
+// console.log(triangleArea);
 
-document.getElementById('identyfikator').innerHTML = 'Pole trójkąta to: ' + triangleArea;
+// document.getElementById('identyfikator').innerHTML = 'Pole trójkąta to: ' + triangleArea;
 
 // ćwiczenie 8.5
 
-var value = (a * a) + (2 * a * h) - (h * h);
-if (value < 0) {
-	document.write('Liczba jest mniejsza od zera');
-} else if (value == 0) {
-	document.write('Liczba jest równa zeru');
-} else {
-	document.write('Liczba jest większa od zera');
+// var value = (a * a) + (2 * a * h) - (h * h);
+// if (value < 0) {
+// 	document.write('Liczba jest mniejsza od zera');
+// } else if (value == 0) {
+// 	document.write('Liczba jest równa zeru');
+// } else {
+// 	document.write('Liczba jest większa od zera');
+// }
+
+// ĆWICZENIE 8.6
+
+function getTriangleArea(a, h) {
+	var area;
+	if ((a > 0) && (h > 0)) {
+		area = a*h/2;
+	} else {
+		area = "Nieprawidłowe dane";
+	}
+	return area;
 }
 
+var triangleArea1 = getTriangleArea(10, 15);
+var triangleArea2 = getTriangleArea(19, 4);
+var triangleArea3 = getTriangleArea(1, 32);
+
+document.getElementById('identyfikator').innerHTML = getTriangleArea(10, 8);

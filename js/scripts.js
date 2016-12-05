@@ -18,7 +18,7 @@ var age = 27,
 // tablice tworzy się poprzez podanie poszczególnych wartości po przecinkach pomiędzy kwadratowymi nawiasami.
 // poszczególne indeksy (bo tak nazywają się kolejne elementy tablicy) mają przypisany odpowiedni numer zaczynając od 0
 
-var testArray = [1.00, 'HTML', 'CSS', 'JS'];
+var testArray = [27, 'HTML', 'CSS', 'JS', ['GRUNT', 'GIT', 'JQUERY'], 'BOOTSTRAP'];
 
 /* obiekty to swojego rodzaju kontenery, które zawierają inne typy danych.
 	deklaruje się je jak zwykłą zmienna, tylko po znaku przypisania (=) otwieramy nawias klamrowy (literał obiektowy) i pomiędzy nimi
@@ -38,12 +38,12 @@ var userSurname = person['surname']; // nie można pominąć apostrofów/cudzys�
 
 // można dodać kolejne atrybuty do instniejących już obiektów poprzez odwołanie się do ich nazwy i po kropce wpisanie nazwy natrybutu
 
-person.favoriteColor = 'Blue';
+// person.favoriteColor = 'Blue';
 
 // Teraz jedno z ćwiczeń z kodilli - obliczanie pola trójkąta
 
-var a = 2;
-var h = 3;
+// var a = 2;
+// var h = 3;
 // var triangleArea = a*h/2;
 // console.log(triangleArea);
 
@@ -62,18 +62,31 @@ var h = 3;
 
 // ĆWICZENIE 8.6
 
-function getTriangleArea(a, h) {
-	var area;
-	if ((a > 0) && (h > 0)) {
-		area = a*h/2;
-	} else {
-		area = "Nieprawidłowe dane";
-	}
-	return area;
+// function getTriangleArea(a, h) {
+// 	var area;
+// 	if ((a > 0) && (h > 0)) {
+// 		area = a*h/2;
+// 	} else {
+// 		area = "Nieprawidłowe dane";
+// 	}
+// 	return area;
+// }
+
+// var triangleArea1 = getTriangleArea(10, 15);
+// var triangleArea2 = getTriangleArea(19, 4);
+// var triangleArea3 = getTriangleArea(1, 32);
+
+// document.getElementById('para').innerHTML = getTriangleArea(10, 8);
+
+// ĆWICZENIE 8.7
+
+var male = ["Peter", "Adam", "Matti", "Alexander", "Christian"];
+var female = ["Agatha", "Lucy", "Maya", "Alexandra", "Anna"];
+var allNames = male.concat(female);
+var newName = prompt("Podaj swoje imię");
+if (allNames.indexOf(newName) === -1) {
+	allNames.push(newName);
+} else {
+	newName = alert("Jest już taka osoba na liście gości. Przykro nam...")
 }
-
-var triangleArea1 = getTriangleArea(10, 15);
-var triangleArea2 = getTriangleArea(19, 4);
-var triangleArea3 = getTriangleArea(1, 32);
-
-document.getElementById('identyfikator').innerHTML = getTriangleArea(10, 8);
+document.getElementById('para').innerHTML = allNames.join(" <br><br> ");

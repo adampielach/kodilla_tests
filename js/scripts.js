@@ -93,8 +93,28 @@ var userSurname = person['surname']; // nie można pominąć apostrofów/cudzys�
 
 // ĆWICZENIE 8.8
 
-var text = "Papugi koszą trawę, unosząc się nad ziemią 15 centymetrów, na czerwonych dywanach.";
-var greenElephants = 'Zielone słonie'.toUpperCase();
-var animals = text.replace('Papugi', greenElephants);
-console.log(animals.substr(0, animals.length/2));
-document.getElementById('prop').innerHTML = animals;
+// var text = "Papugi koszą trawę, unosząc się nad ziemią 15 centymetrów, na czerwonych dywanach.";
+// var greenElephants = 'Zielone słonie'.toUpperCase();
+// var animals = text.replace('Papugi', greenElephants);
+// console.log(animals.substr(0, animals.length/2));
+// document.getElementById('prop').innerHTML = animals;
+
+// ĆWICZENIE 8.9
+
+// zmieniłem działanie skryptu, bo nie mogłęm ogarnąć tego na dwie pętle. Jedna też działa ;)
+
+function drawTree(levels) {
+  var star = new String;
+  for (var a = 0 ; a < levels ; a++) {
+    star += "*";
+    document.getElementById('prop').innerHTML += "<br />" + star;
+  }
+  if (levels > 10) {
+    document.getElementById('prop').innerHTML += "<br /> ** <br /> *** <br /> ****";
+  } else if (levels > 20) {
+    document.getElementById('prop').innerHTML += "<br /> *** <br /> **** <br /> *****";
+  } else {
+    document.getElementById('prop').innerHTML += "<br /> * <br /> *";
+  }
+}
+drawTree(15);

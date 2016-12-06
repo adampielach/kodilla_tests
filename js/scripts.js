@@ -80,13 +80,21 @@ var userSurname = person['surname']; // nie można pominąć apostrofów/cudzys�
 
 // ĆWICZENIE 8.7
 
-var male = ["Peter", "Adam", "Matti", "Alexander", "Christian"];
-var female = ["Agatha", "Lucy", "Maya", "Alexandra", "Anna"];
-var allNames = male.concat(female);
-var newName = prompt("Podaj swoje imię");
-if (allNames.indexOf(newName) === -1) {
-	allNames.push(newName);
-} else {
-	newName = alert("Jest już taka osoba na liście gości. Przykro nam...")
-}
-document.getElementById('para').innerHTML = allNames.join(" <br><br> ");
+// var male = ["Peter", "Adam", "Matti", "Alexander", "Christian"];
+// var female = ["Agatha", "Lucy", "Maya", "Alexandra", "Anna"];
+// var allNames = male.concat(female);
+// var newName = prompt("Podaj swoje imię");
+// if (allNames.indexOf(newName) === -1) {
+// 	allNames.push(newName);
+// } else {
+// 	newName = alert("Jest już taka osoba na liście gości. Przykro nam...")
+// }
+// document.getElementById('para').innerHTML = allNames.join(" <br><br> ");
+
+// ĆWICZENIE 8.8
+
+var text = "Papugi koszą trawę, unosząc się nad ziemią 15 centymetrów, na czerwonych dywanach.";
+var greenElephants = 'Zielone słonie'.toUpperCase();
+var animals = text.replace('Papugi', greenElephants);
+console.log(animals.substr(0, animals.length/2));
+document.getElementById('prop').innerHTML = animals;

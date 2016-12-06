@@ -87,6 +87,6 @@ var newName = prompt("Podaj swoje imię");
 if (allNames.indexOf(newName) === -1) {
 	allNames.push(newName);
 } else {
-	newName = alert("Jest już taka osoba na liście gości. Przykro nam...")
+	newName = alert("Jest już taka osoba na liście gości. Przykro nam...");
 }
 document.getElementById('para').innerHTML = allNames.join(" <br><br> ");

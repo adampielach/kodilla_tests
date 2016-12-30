@@ -4,16 +4,103 @@
   box-sizing: border-box;
   background-color: #ccc;
   font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
 }
+
+/* GENERAL */
 
 .container {
   max-width: 1200px;
   margin: auto;
-  text-align: center;
+  padding: 0 20px;
 }
 
-.jsgate {
-  padding: 20px;
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+     -khtml-user-select: none; /* Konqueror */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+/* NAVBAR */
+
+#nav {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display : block;
+  height: 44px;
+  color: ivory;
+  font-size: 18px;
+  margin: 0;
+  z-index: 9999;
+}
+
+#nav ul {
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+  text-align: justify;
+  max-height: 44px;
+  width: auto;
+}
+
+/* justify list elements */
+
+#nav ul:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
+
+#nav ul > li {
+  position: relative;
+  display: inline-block;
+  background-color: inherit;
+  cursor: default;
+  height: 44px;
+  z-index: 1;
+  line-height: 44px;
+  transition: all 0.3s ease-in-out;
+}
+
+#nav ul > .home-link i {
+  background-color: inherit;
+  font-size: 2em;
+  vertical-align: middle;
+  transition: all 0.3s ease-in-out;
+}
+
+#nav .home-link a {
+  color: #ccc;
+  background-color: transparent;
+}
+
+#nav ul > .home-link i:hover {
+  color: #FF6347;
+}
+
+#nav ul > li:hover {
+  color: silver ;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
 }
 
 p {
@@ -30,4 +117,43 @@ p > span {
 
 p::selection {
   color: #999;
+}
+
+.content {
+  position: relative;
+  height: 100%;
+  /* temporary setting, change to 50px after adjustments */
+  padding-top: 100px; 
+}
+
+/* FOOTER */
+
+#footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#footer ul {
+  text-align: center;
+}
+
+#footer ul > li {
+  display: inline-block;
+  margin: 10px;
+}
+
+#footer ul > li:hover i.fa{
+  color: #bbb;
+  background-color: #333;
+}
+
+#footer ul > li i.fa {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #bbb;
+  line-height: 30px;
+  transition: all 0.3s ease-in-out;
 }

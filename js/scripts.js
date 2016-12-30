@@ -103,18 +103,55 @@ var userSurname = person['surname']; // nie można pominąć apostrofów/cudzys�
 
 // zmieniłem działanie skryptu, bo nie mogłęm ogarnąć tego na dwie pętle. Jedna też działa ;)
 
-function drawTree(levels) {
-  var star = new String;
-  for (var a = 0 ; a < levels ; a++) {
-    star += "*";
-    document.getElementById('prop').innerHTML += "<br />" + star;
+// function drawTree(levels) {
+//   var star = new String;
+//   for (var a = 0 ; a < levels ; a++) {
+//     star += "*";
+//     document.getElementById('prop').innerHTML += "<br />" + star;
+//   }
+//   if (levels > 10) {
+//     document.getElementById('prop').innerHTML += "<br /> ** <br /> *** <br /> ****";
+//   } else if (levels > 20) {
+//     document.getElementById('prop').innerHTML += "<br /> *** <br /> **** <br /> *****";
+//   } else {
+//     document.getElementById('prop').innerHTML += "<br /> * <br /> *";
+//   }
+// }
+// drawTree(15);
+
+// function skanuj(){
+//   document.getElementById("prop").innerHTML += 'Skanowanie portu: ' + Math.floor((Math.random() * 5000) + 500) + ' - OK <br />';
+// }
+// var interval = setInterval(skanuj, 2000);
+// function stopScan() {
+//   document.getElementById("prop").innerHTML += 'Skanowanie zakończone. Nie wykryto błędów.';
+//   clearInterval(interval);
+// }
+// setTimeout(stopScan, 11000);
+
+// document.getElementById("prop").innerHTML = window.location;
+
+window.onload = function() {
+
+  var getNavId = document.getElementById('nav');
+  var getElements = getNavId.getElementsByTagName('li').length - 1;
+  console.log(getElements);
+
+// this function will resize nav elements depending on their number
+  function resizeNavElements()	{
+  	if (getElements >= 2) {
+  		getNavId.getElementsByTagName('li');
+  	}
   }
-  if (levels > 10) {
-    document.getElementById('prop').innerHTML += "<br /> ** <br /> *** <br /> ****";
-  } else if (levels > 20) {
-    document.getElementById('prop').innerHTML += "<br /> *** <br /> **** <br /> *****";
-  } else {
-    document.getElementById('prop').innerHTML += "<br /> * <br /> *";
-  }
+
+// function that adds new element [to the navigation bar]
+
+function newNavElement(elementName) {
+	var getUl = getNavId.getElementsByClassName('noselect');
+	var arrFromList = [].slice.call(getUl); // I have no idea how this does the thing but it does
+	var newElem = document.createElement('li'); // creating new li
+	newElem.innerHTML = elementName; // inserting text into newly created element
+	arrFromList[0].appendChild(newElem);
 }
-drawTree(15);
+newNavElement('NewElement');
+}

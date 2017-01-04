@@ -26,6 +26,13 @@
                                   not supported by any browser */
 }
 
+.content {
+  position: relative;
+  height: 100%;
+  /* temporary setting, change to 50px after adjustments */
+  padding-top: 100px; 
+}
+
 /* NAVBAR */
 
 #nav {
@@ -91,6 +98,8 @@
   color: silver ;
 }
 
+/* BODY */
+
 ul {
   list-style-type: none;
   padding: 0 20px;
@@ -119,12 +128,8 @@ p::selection {
   color: #999;
 }
 
-.content {
-  position: relative;
-  height: 100%;
-  /* temporary setting, change to 50px after adjustments */
-  padding-top: 100px; 
-}
+
+
 
 /* FOOTER */
 

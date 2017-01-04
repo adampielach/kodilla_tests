@@ -13,7 +13,7 @@
 .container {
   max-width: 1200px;
   margin: auto;
-  padding: 0 20px;
+  padding: 0;
 }
 
 .noselect {
@@ -128,8 +128,9 @@ p::selection {
   color: #999;
 }
 
-
-
+.row {
+  margin: 0;
+}
 
 /* FOOTER */
 

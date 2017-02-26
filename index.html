@@ -3,30 +3,33 @@
 
 <head>
      <meta charset="UTF-8">
-     <title>TITLE</title>
+     <title>JS CAROUSEL</title>
      <meta name="description" content="DESCRIPTION">
-    <link rel="stylesheet" href="css/style.css">
 
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
      <!--[if lt IE 9]>
        <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
      <![endif]-->
  </head>
 
- <body>
-   <div id="carousel">
-     <ul>
-       <li><img src="https://unsplash.it/400/" alt="placeholded image"></li>
-       <li><img src="https://unsplash.it/400/?image=1080" alt="placeholded image"></li>
-       <li><img src="https://unsplash.it/400/?image=1069" alt="placeholded image"></li>
-       <li><img src="https://unsplash.it/400/?image=1063" alt="placeholded image"></li>
-       <li><img src="https://unsplash.it/400/?image=1032" alt="placeholded image"></li>
-     </ul>
-   </div>
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-  <script src="js/scripts.js"></script>
+<body>
+<div class="wrapper">
+	<div class="slider" id="carousel">
+		<button class="left">&#60;</button>
+		<button class="right">&#62;</button>
+		<ul>
+			<li><img src="https://unsplash.it/640/480?image=911" alt="dummy image 1" /></li>
+			<li><img src="https://unsplash.it/640/480?image=681" alt="dummy image 2" /></li>
+			<li><img src="https://unsplash.it/640/480?image=968" alt="dummy image 3" /></li>
+			<li><img src="https://unsplash.it/640/480?image=96" alt="dummy image 4" /></li>
+		</ul>
+		<div class="controls"></div>
+	</div>
+</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
  </body>
-
  </html>
